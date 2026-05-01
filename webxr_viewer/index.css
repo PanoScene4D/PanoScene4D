@@ -3770,6 +3770,25 @@ body {
   background-color: rgba(0, 0, 0, 0.25);
 }
 
+.vr-button {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 30;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #e2e8f0 0%, #94a3b8 100%);
+  color: #0f172a;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+.vr-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
 #view-cube-container {
   position: absolute;
   width: 140px;

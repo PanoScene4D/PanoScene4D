@@ -20,4 +20,3 @@ exports.Response = nodeFetch.Response;
 
 // Needed for TypeScript consumers without esModuleInterop.
 exports.default = fetch;
-//# sourceMappingURL=node-ponyfill-YwKog7P0.js.map
