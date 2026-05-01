@@ -1,16 +1,66 @@
-## Hi there 
+# PanoScene4D
 
-<!--
-**PanoScene4D/PanoScene4D** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+WebXR Gaussian Splat viewer for PanoScene4D.
 
-Here are some ideas to get you started:
+The repository stores a static WebXR viewer plus a small default demo scene. The large original training assets are not committed.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Directory
+
+```text
+.
+├── webxr_viewer/             # GitHub Pages static site
+│   ├── index.html
+│   ├── index.js
+│   ├── index.css
+│   ├── static/               # viewer UI/runtime assets
+│   └── scenes/               # default compressed demo scene
+│       ├── case1_static_sog/
+│       └── girl_ply_seq_sam3_rotx_y135_staticworld/
+└── .github/workflows/pages.yml
+```
+
+## Local Preview
+
+```bash
+cd webxr_viewer
+python3 -m http.server 3000
+```
+
+Open:
+
+```text
+http://127.0.0.1:3000
+```
+
+The default page loads:
+
+```text
+./scenes/case1_static_sog/scene.sog
+./scenes/girl_ply_seq_sam3_rotx_y135_staticworld/sequence.json
+```
+
+## Open Another Scene
+
+Static splat:
+
+```text
+http://127.0.0.1:3000/?load=https://example.com/scene.sog&filename=scene.sog
+```
+
+PLY sequence:
+
+```text
+http://127.0.0.1:3000/?sequence=https://example.com/sequence.json
+```
+
+Static plus dynamic:
+
+```text
+http://127.0.0.1:3000/?load=https://example.com/static.sog&filename=static.sog&sequence=https://example.com/sequence.json
+```
+
+The scene URLs must be HTTPS and must allow browser CORS requests.
+
+## GitHub Pages
+
+Push to `main`, then enable Pages with source `GitHub Actions` in repository settings.
