@@ -14,7 +14,7 @@ The repository stores a static WebXR viewer plus a small default demo scene. The
 │   ├── index.css
 │   ├── static/               # viewer UI/runtime assets
 │   └── scenes/               # default compressed demo scene
-│       ├── case1_static_sog/
+│       ├── case1_static_compressed/
 │       └── girl_ply_seq_sam3_rotx_y135_staticworld/
 └── .github/workflows/pages.yml
 ```
@@ -35,7 +35,7 @@ http://127.0.0.1:3000
 The default page loads:
 
 ```text
-./scenes/case1_static_sog/scene.sog
+./scenes/case1_static_compressed/scene.compressed.ply
 ./scenes/girl_ply_seq_sam3_rotx_y135_staticworld/sequence.json
 ```
 
@@ -72,7 +72,7 @@ xrScale=0.7
 Lower values improve Quest performance at the cost of sharpness:
 
 ```text
-https://panoscene4d.github.io/PanoScene4D/?xrScale=0.6
+https://panoscene4d.github.io/?xrScale=0.6
 ```
 
 Use `xrScale=1` for native headset resolution if performance allows.
